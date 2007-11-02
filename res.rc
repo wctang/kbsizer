@@ -1,0 +1,353 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "res.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "res.h\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_REGHOTKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PRESET_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOGEX 0, 0, 221, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_SIZELIST,7,7,189,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Up",IDC_MOVEUP,200,7,14,27
+    PUSHBUTTON      "Dn",IDC_MOVEDOWN,200,63,14,27
+END
+
+IDD_REGHOTKEY DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Register Hotkey"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "確定",IDOK,129,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,129,24,50,14
+END
+
+IDD_PRESET_CONFIG DIALOGEX 0, 0, 168, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "確定",IDOK,40,62,35,14
+    PUSHBUTTON      "刪除",IDC_DELFROMLIST,126,62,35,14
+    PUSHBUTTON      "取消",IDCANCEL,79,62,35,14
+    LTEXT           "名稱：",IDC_STATIC,7,10,43,8
+    EDITTEXT        IDC_SETTING_NAME,33,7,128,14,ES_AUTOHSCROLL
+    CONTROL         "移動至 X:",IDC_MOVEPOS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,28,51,10
+    EDITTEXT        IDC_POS_X,59,25,36,14,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,99,28,8,8
+    EDITTEXT        IDC_POS_Y,110,25,36,14,ES_AUTOHSCROLL
+    CONTROL         "改變大小至 W:",IDC_RESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,44,67,10
+    EDITTEXT        IDC_POS_WIDTH,75,42,36,14,ES_AUTOHSCROLL
+    LTEXT           "H:",IDC_STATIC,115,44,8,8
+    EDITTEXT        IDC_POS_HEIGHT,124,41,36,14,ES_AUTOHSCROLL
+END
+
+IDD_MAIN DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_LANGUAGES,49,7,93,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "語言：",IDC_STATIC,7,8,37,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CTXMENU MENUEX 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "啟動",                      IDM_ENABLE
+        MENUITEM "開機時啟動",                IDM_AUTORUN
+        POPUP " "
+        BEGIN
+            MENUITEM "視窗移動模式",               IDM_MODE_MOVE
+            MENUITEM "滑鼠移動模式",               IDM_MODE_MOUSE
+        END
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "設定...",                  IDM_CONF
+        MENUITEM "關於",                      IDM_ABOUT
+        MENUITEM "離開",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LANG_NAME           "繁體中文"
+    IDS_CONFIG_TITLE        "kbSizer 設定"
+    IDS_CONFIG_TITLE_MAIN   "kbSizer"
+    IDS_CONFIG_TITLE_PRESET "指定視窗位置"
+    IDS_HELPLINK            "http://kbsizer.sourceforge.net/doc/"
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_REGHOTKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PRESET_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG DIALOGEX 0, 0, 221, 97
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_SIZELIST,7,7,189,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Up",IDC_MOVEUP,200,7,14,27
+    PUSHBUTTON      "Dn",IDC_MOVEDOWN,200,63,14,27
+END
+
+IDD_REGHOTKEY DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Register Hotkey"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_PRESET_CONFIG DIALOGEX 0, 0, 161, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,40,65,35,14
+    PUSHBUTTON      "Delete",IDC_DELFROMLIST,119,65,35,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,65,35,14
+    LTEXT           "Name:",IDC_STATIC,7,10,22,8
+    EDITTEXT        IDC_SETTING_NAME,35,9,119,14,ES_AUTOHSCROLL
+    CONTROL         "Move to X:",IDC_MOVEPOS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,28,51,10
+    EDITTEXT        IDC_POS_X,59,25,36,14,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,99,28,8,8
+    EDITTEXT        IDC_POS_Y,110,25,36,14,ES_AUTOHSCROLL
+    CONTROL         "Resize to W:",IDC_RESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,44,57,10
+    EDITTEXT        IDC_POS_WIDTH,65,42,36,14,ES_AUTOHSCROLL
+    LTEXT           "H:",IDC_STATIC,107,44,8,8
+    EDITTEXT        IDC_POS_HEIGHT,118,41,36,14,ES_AUTOHSCROLL
+END
+
+IDD_MAIN DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_LANGUAGES,49,7,93,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Language:",IDC_STATIC,7,8,37,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CTXMENU MENUEX 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Enable",                      IDM_ENABLE
+        MENUITEM "Start On &Boot",              IDM_AUTORUN
+        POPUP " "
+        BEGIN
+            MENUITEM "Move Mode",                   IDM_MODE_MOVE
+            MENUITEM "Mouse Mode",                  IDM_MODE_MOUSE
+        END
+        MENUITEM MFT_SEPARATOR
+        MENUITEM "&Config...",                  IDM_CONF
+        MENUITEM "&About",                      IDM_ABOUT
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TRAY                ICON                    "tray.ico"
+IDI_TRAY_DISABLE        ICON                    "tray-disable.ico"
+IDI_TRAY_MOUSE          ICON                    "tray-mouse.ico"
+IDI_TRAY_KEYBOARD       ICON                    "tray-keyboard.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_LANG_NAME           "English"
+    IDS_CONFIG_TITLE        "kbSizer Configuration"
+    IDS_CONFIG_TITLE_MAIN   "kbSizer"
+    IDS_CONFIG_TITLE_PRESET "Preset Window"
+    IDS_HELPLINK            "http://kbsizer.sourceforge.net/doc/"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
