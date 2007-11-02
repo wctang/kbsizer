@@ -1,0 +1,29 @@
+Features:
+
+v1.1
+    - Change icon.
+
+v1.0
+    - Fix bug about change mode with keyboard.
+
+v0.8
+    - Change the Alpha feature and key binding.
+    - Change the configuration features.
+    - Add control mouse features.
+
+v0.7
+    - Win + NumPad: Move window with Numpad.
+      Win + NumPad 0 :  Maximize / Restore
+      Win + NumPad .  :  Minimize 
+    - Win + Ctrl + (2-keypad number sequence) : Resize window to fit specified area. 
+      First entered number sets the start point and second number sets the end point. 
+
+v0.6
+    - Add configuration feature.
+    - Add multi-language feature.
+    - Add predefined window position feature.
+
+v0.5
+    - Change shortcut based on Win-Key.
+    - Add always-on-top shortcut.
+    - Add transparent shortcut.
